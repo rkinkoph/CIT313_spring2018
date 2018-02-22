@@ -8,6 +8,7 @@ class user extends model {
   public function __set($name, $value) {
     $this->$name = $value;
     return;
+
   }
   public function __get($name) {
     return $this->$name;
@@ -17,11 +18,11 @@ class user extends model {
   }
 
   public function getName() {
-    $this->userID = "$userID";
-    $this->firstname = "$firstname";
-    $this->lastname = "$lastname";
-    $this->email = "$email";
-    $this->role = "$role";
+    $this->userID = $userID;
+    $this->firstname = $firstname;
+    $this->lastname = $lastname;
+    $this->email = $email;
+    $this->role = $role;
   }
 }
 
