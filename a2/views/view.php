@@ -8,11 +8,11 @@
       <?php
 
       echo "<ul>";
-      echo "<li>User ID: " .$user->userID."</li>";
-      echo "<li>First Name: ".$user->firstname."</li>";
-      echo "<li>Last Name: " .$user->lastname."</li>";
-      echo "<li>Email Address: " .$user->email."</li>";
-      echo "<li>Role: ".$user->role."</li>";
+      echo "<li>User ID: " .$userid."</li>";
+      echo "<li>First Name: ".$first."</li>";
+      echo "<li>Last Name: " .$last."</li>";
+      echo "<li>Email Address: " .$email."</li>";
+      echo "<li>Role: ".$role."</li>";
       echo "</ul>";
 
 
