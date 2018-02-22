@@ -18,11 +18,14 @@ class user extends model {
   }
 
   public function getName() {
-    $this->userID = $userID;
-    $this->firstname = $firstname;
-    $this->lastname = $lastname;
-    $this->email = $email;
-    $this->role = $role;
+    return array (
+      'userid'=>$this->userID,
+      'first'=>$this->firstname,
+      'last'=>$this->lastname,
+      'email'=>$this->email,
+      'role'=>$this->role,
+    );
+
   }
 }
 

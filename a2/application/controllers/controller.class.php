@@ -24,13 +24,14 @@ class controller {
   }
 
   function home() {
+
+    $this->user->userID = "rkinkoph";
+    $this->user->firstname = "Becca";
+    $this->user->lastname = "Kinkoph";
+    $this->user->email = "rk@iu.edu";
+    $this->user->role = "admin";
     $data = $this->user->getName();
     $this->load->view("view.php",$data);
-    $this->userID = "rkinkoph";
-    $this->firstname = "Becca";
-    $this->lastname = "Kinkoph";
-    $this->email = "rk@iu.edu";
-    $this->role = "admin";
   }
 }
 
