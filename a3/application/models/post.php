@@ -3,8 +3,7 @@ class Post extends Model{
 
 	function getPost($pID){
 
-		// $sql =  'SELECT pID, title, content, date, categoryID, uID FROM posts WHERE pID = ?';
-		$sql =  'SELECT pID, title, content, date, categoryID, uID FROM posts WHERE pID = ? INNER JOIN users ON posts.Uid = users.Uid';
+ $sql =  'SELECT pID, title, content, date, categoryID, uID FROM posts WHERE pID = ?';
 // INNER JOIN table2 ON table1.column_name = table2.column_name;
 		// perform query
 		$results = $this->db->getrow($sql, array($pID));

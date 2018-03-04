@@ -1,24 +1,37 @@
 <?php
 
-class MemberController extends Controller{
+class MembersController extends Controller{
+
+  public $userObject;
+
+  public function view($uID){
+//    $this->set('currentAction','view');
+    $this->set('title', 'Member Profile');
+
+    $this->userObject = new User();
+
+    $member = $this->userObject->getUser($uID);
+    $this->set('first_name', $member['first_name']);
+    $this->set('last_name', $member['last_name']);
+    $this->set('email', $member['email']);
 
 
-   	public function view($pID){
+  }
 
-		$this->postObject = new Post();
-		$post = $this->postObject->getPost($pID);
-	  	$this->set('post',$post);
 
-   	}
+  public function defaultTask(){
 
-	public function defaultTask(){
+//    $this->set('currentAction','all');
+    $this->set('title', 'Member List');
 
-		$this->postObject = new Post();
-		$posts = $this->postObject->getAllPosts();
-		$this->set('title', 'The Default Blog View');
-		$this->set('posts',$posts);
+		$this->userObject = new User();
+
+    $members = $this->userObject->getAllUsers();
+
+		$this->set('members',$members);
 
 	}
+
 
 
 }
