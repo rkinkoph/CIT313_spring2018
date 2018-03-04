@@ -14,7 +14,7 @@ class User extends Model{
 		return $users;
 	}
 
-  function getUser($uID){
+  public function getUser($uID){
 
  $sql = 'SELECT uID, first_name, last_name, email, password FROM users WHERE uID = ?';
 // INNER JOIN table2 ON table1.column_name = table2.column_name;
