@@ -5,7 +5,7 @@ class MembersController extends Controller{
   public $userObject;
 
   public function view($uID){
-//    $this->set('currentAction','view');
+    $this->set('currentAction','view');
     $this->set('title', 'Member Profile');
 
     $this->userObject = new User();
@@ -21,7 +21,7 @@ class MembersController extends Controller{
 
   public function defaultTask(){
 
-//    $this->set('currentAction','all');
+    $this->set('currentAction','all');
     $this->set('title', 'Member List');
 
 		$this->userObject = new User();

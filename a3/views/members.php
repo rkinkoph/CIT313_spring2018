@@ -2,8 +2,9 @@
 <?php include('elements/header.php');?>
 <?php
 if( isset($member) ) {
-	extract($member);?>
-
+	extract($member);
+	?>
+<?php var_dump($member); ?>
 <div class="container">
 	<div class="page-header">
 
