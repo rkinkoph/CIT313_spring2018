@@ -112,7 +112,6 @@ class Users extends Model{
 		return $user;
 
 	}
-}
 
 public function getUserFromID($uID) {
 	$sql = 'SELECT * FROM users WHERE uID = ?';
@@ -120,4 +119,5 @@ public function getUserFromID($uID) {
 	$user = $results;
 	return $user;
 
+	}
 }
