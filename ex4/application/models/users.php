@@ -16,7 +16,7 @@ class Users extends Model{
 			$userInfo = $this->getUserFromID($_SESSION['uID']);
 			$this->uID = $userInfo['uID'];
 			$this->first_name = $userInfo['first_name'];
-			$this->last_name = $userInfor['last_name'];
+			$this->last_name = $userInfo['last_name'];
 			$this->email = $userInfo['email'];
 			$this->user_type = $userInfo['user_type'];
 		}

@@ -3,8 +3,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="<?php echo BASE_URL?>views/js/jquery.js"></script>
     <script src="<?php echo BASE_URL?>views/js/bootstrap.min.js"></script>
+    <?php $this->userObject = new Users(); ?>
     <?php
-    if($u->isAdmin()) {
+    if($this->userObject->isAdmin()) {
       ?>
       <script src="<?php echo BASE_URL?>application/plugins/tinyeditor/tiny.editor.packed.js"></script>
       <script>
