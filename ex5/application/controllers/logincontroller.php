@@ -14,7 +14,7 @@ class LoginController extends Controller{
 
 			 $_SESSION['uID'] =$userInfo['uID'];
 
-       if(strlen($_SESSION['redirect']) > 0 ) {
+       if(isset($_SESSION['redirect']) > 0 ) {
 
          $view = $_SESSION['redirect'];
          unset($_SESSION['redirect']);

@@ -15,9 +15,6 @@ class Controller {
     $u = new Users();
 
     //check access to the page
-
-
-
     if($this->access == 1 && !$u->isAdmin()) {
       $_SESSION['redirect'] = $view;
       header('Location: '.BASE_URL.'login/');
