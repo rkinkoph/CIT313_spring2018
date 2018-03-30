@@ -38,8 +38,10 @@ class LoginController extends Controller{
 
 //close the session
      session_write_close();
-
+     echo "You have successfully logged out.";
 //send to the homepage
      header('Location: '.BASE_URL);
+
+
    }
 }
