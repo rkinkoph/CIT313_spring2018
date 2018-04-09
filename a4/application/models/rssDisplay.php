@@ -24,7 +24,7 @@ class RssDisplay extends Model{
       }
       return array('title'=>$title, 'pub'=>$pub, 'desc'=>$desc);
       }
-    }
+    
 
     public function getChannelInfo() {
       $rss = simplexml_load_file($this->feed_url);

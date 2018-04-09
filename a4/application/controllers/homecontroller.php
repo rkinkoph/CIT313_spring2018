@@ -8,13 +8,13 @@ class HomeController extends Controller{
 
 		$number = 8;
 		$feed_data = $rss->getFeedItems($number);
-		$this->set('numItems', $numofitems);
+		$this->set('numItems', $number);
 		$this->set('feed_data', $feed_data);
 
 		$channel_info = $rss->getChannelInfo();
-		$this->set('channel_title', $channelinfo['title']);
-		$this->set('channel_link', $channelinfo['link']);
-		$this->set('channel_desc', $channelinfo['desc']);
+		$this->set('channel_title', $channel_info['title']);
+		$this->set('channel_link', $channel_info['link']);
+		$this->set('channel_desc', $channel_info['desc']);
 
 
 	}
