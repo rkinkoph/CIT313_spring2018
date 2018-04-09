@@ -3,7 +3,7 @@
 class HomeController extends Controller{
 
 	public function index(){
-		$feed = "http://fox59.com/feed";
+		$feed = "http://rss.cnn.com/rss/cnn_topstories.rss";
 		$rss = new RssDisplay($feed);
 
 		$number = 8;
