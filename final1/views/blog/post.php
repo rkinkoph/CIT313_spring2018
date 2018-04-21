@@ -29,6 +29,8 @@ if( is_array($post) ) {
     echo '<form action="'.BASE_URL.'blog/addcomment/" method="post">
       <textarea name="comment">Leave a comment here...</textarea>
       <br>
+      <input name="uID" value="'.$_SESSION["uID"].'" style="display: none">
+      <input name="postID" value="'.$pID.'" style="display: none">
       <input type="submit" class= "btn">
     </form>';
   }
