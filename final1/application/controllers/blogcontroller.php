@@ -15,6 +15,15 @@ class BlogController extends Controller{
 		 $this->set('comments', $comments);
    	}
 
+	public function addComment() {
+		$this->commentsObject = new Comments();
+		$data = array('commentID'=>$_POST['commentID'],'uID'=>$_POST['uID'],'commentText'=>$_POST['commentText'],'date'=>$_POST['date'], 'postID'=>$_POST);
+		//$this->getCategories();
+
+		$result = $this->commentsObject->addComment($data);
+		$this->set('message', $result);
+	}
+
 	public function index(){
 		$this->postObject = new Post();
 		$posts = $this->postObject->getAllPosts();

@@ -25,8 +25,8 @@ if( is_array($post) ) {
 <br><br>
 
 <?php
-  if (isset($_SESSION[‘uID’])) {
-    echo '<form>
+  if (isset($_SESSION['uID'])) {
+    echo '<form action="'.BASE_URL.'blog/addcomment/" method="post">
       <textarea name="comment">Leave a comment here...</textarea>
       <br>
       <input type="submit" class= "btn">
@@ -34,7 +34,12 @@ if( is_array($post) ) {
   }
 
 ?>
-
+<?php if($message){?>
+  <div class="alert alert-success">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+    <?php echo $message?>
+  </div>
+<?php }?>
 
     </div>
 
