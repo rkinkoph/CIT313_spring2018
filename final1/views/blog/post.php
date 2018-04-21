@@ -33,8 +33,7 @@ if( is_array($post) ) {
 date_default_timezone_set('America/Indiana/Indianapolis').'
       <input name="date" id="date" size="16" type="date" value="'.$date = date('Y-m-d H:i:s').'">
       <input name="uID" value="'.$_SESSION["uID"].'" style="display: none">
-      <input name="postID" value="'.$postID.'" style="display: none">
-      <input type="hidden" name="commentID" value="'.$commentID.'">
+      <input name="postID" value="'.$pID.'" style="display: none">
       <input type="submit" class= "btn">
     </form>';
   }
