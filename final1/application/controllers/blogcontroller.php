@@ -22,6 +22,7 @@ class BlogController extends Controller{
 
 		$result = $this->commentsObject->addComment($data);
 		$this->set('message', $result);
+		header("Location: " . BASE_URL . "blog/post/" . $_POST['postID']);
 	}
 
 	public function index(){

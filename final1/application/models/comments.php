@@ -22,7 +22,7 @@ class Comments extends Model{
       $this->db->execute($sql,$data);
       $message = 'Comment added.';
       return $message;
-      header("Location: " . BASE_URL . "blog/post/" . $_POST['postID']);
+      
 
   }
 

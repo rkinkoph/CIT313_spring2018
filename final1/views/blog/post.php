@@ -27,10 +27,14 @@ if( is_array($post) ) {
 <?php
   if (isset($_SESSION['uID'])) {
     echo '<form action="'.BASE_URL.'blog/addcomment/" method="post">
-      <textarea name="comment">Leave a comment here...</textarea>
+      <textarea name="comments">Leave a comment here...</textarea>
       <br>
+      <label for="date">Date</label>'.
+date_default_timezone_set('America/Indiana/Indianapolis').'
+      <input name="date" id="date" size="16" type="date" value="'.$date = date('Y-m-d H:i:s').'">
       <input name="uID" value="'.$_SESSION["uID"].'" style="display: none">
-      <input name="postID" value="'.$pID.'" style="display: none">
+      <input name="postID" value="'.$postID.'" style="display: none">
+      <input type="hidden" name="commentID" value="'.$commentID.'">
       <input type="submit" class= "btn">
     </form>';
   }
