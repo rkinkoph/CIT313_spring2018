@@ -17,7 +17,7 @@ class BlogController extends Controller{
 
 	public function addComment() {
 		$this->commentsObject = new Comments();
-		$data = array('commentID'=>$_POST['commentID'],'uID'=>$_POST['uID'],'commentText'=>$_POST['commentText'],'date'=>$_POST['date'], 'postID'=>$_POST);
+		$data = array('commentID'=>$_POST['commentID'],'uID'=>$_POST['uID'],'commentText'=>$_POST['commentText'],'date'=>$_POST['date'], 'postID'=>$_POST['postID']);
 		//$this->getCategories();
 
 		$result = $this->commentsObject->addComment($data);
