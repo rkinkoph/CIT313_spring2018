@@ -19,6 +19,10 @@ if( is_array($post) ) {
       <?php
       foreach($comments as $row) {
       echo $row['commentText']."<br><sub>Posted on ". $row['date']." by ".$row['first_name'].' '.$row['last_name'].'</sub><hr>';
+
+        if($u->isAdmin()) {
+          echo '<button class="btn"><a href="'.BASE_URL.'/blog/deleteComment/'.$commentID.'">Delete</a></button></form>';
+        }
     }
        ?>
 
@@ -35,11 +39,7 @@ if( is_array($post) ) {
       <input name="postID" value="'.$pID.'" style="display: none">
       <input type="submit" class= "btn">';
 
-      if($u->isAdmin()) {
-      echo '<button class="btn"><a href="'.BASE_URL.'/blog/deleteComment/'.$commentID.'">Delete</a></button>
 
-      </form>';
-    }
   }
 
 
