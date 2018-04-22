@@ -35,8 +35,8 @@ if( is_array($post) ) {
       <input name="postID" value="'.$pID.'" style="display: none">
       <input type="submit" class= "btn">';
 
-    if (isAdmin()) {
-      '<button class="btn"><a href="'.BASE_URL.'/blog/deleteComment/'.$commentID.'">Delete</a></button>
+      if($u->isAdmin()) {
+      echo '<button class="btn"><a href="'.BASE_URL.'/blog/deleteComment/'.$commentID.'">Delete</a></button>
 
       </form>';
     }
