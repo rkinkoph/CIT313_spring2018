@@ -4,7 +4,8 @@ class BlogController extends Controller{
 
 	public $postObject;
 	public $commentsObject;
-
+	public $deleteComment;
+	public $commentID;
 
 	public function index(){
 		$this->postObject = new Post();

@@ -10,9 +10,10 @@ class Comments extends Model{
       WHERE p.pID = ?
       ORDER BY c.date';
 
-      $results = $this->db->execute($sql, $pID);
+      $results = $this->db->execute($sql, array($pID));
 
-      return $results;
+      $comments = $results;
+      return $comments;
 
   }
 

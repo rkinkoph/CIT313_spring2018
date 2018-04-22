@@ -6,9 +6,12 @@ class ManagePostsController extends Controller{
 
     protected $access = "1";
 
-public function index() {
-
-}
+		public function index(){
+			$this->postObject = new Post();
+			$posts = $this->postObject->getAllPosts();
+			$this->set('title', 'The Default Blog View');
+			$this->set('posts',$posts);
+		}
 
 	public function add(){
 		$this->postObject = new Post();
