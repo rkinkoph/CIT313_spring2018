@@ -36,7 +36,7 @@ if( is_array($post) ) {
       <input type="submit" class= "btn">';
 
     if (isAdmin()) {
-      '<button class="btn"><a href="'.BASE_URL.'/blog/deletecomment/'.$commentID.'">Delete</a></button>
+      '<button class="btn"><a href="'.BASE_URL.'/blog/deleteComment/'.$commentID.'">Delete</a></button>
 
       </form>';
     }

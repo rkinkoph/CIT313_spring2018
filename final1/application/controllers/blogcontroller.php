@@ -37,6 +37,7 @@ class BlogController extends Controller{
 		$this->commentObject - new Comments();
 		$comments =$this->commentsObject->deleteComment($commentID);
 		$this->set('deleteComment', $deleteComment);
+	
 	}
 
 
