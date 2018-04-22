@@ -3,8 +3,12 @@ class Comments extends Model{
 
   public function getComments($pID){
 
-      $sql = 'SELECT c.commentText, c.date, u.first_name, u.last_name FROM comments c INNER JOIN users u ON c.uID = u.uID INNER JOIN posts p on p.pID = c.postID
-      WHERE p.pID = ? ORDER BY c.date';
+      $sql = 'SELECT c.commentText, c.date, u.first_name, u.last_name
+      FROM comments c
+      INNER JOIN users u ON c.uID = u.uID
+      INNER JOIN posts p on p.pID = c.postID
+      WHERE p.pID = ?
+      ORDER BY c.date';
 
       $results = $this->db->execute($sql, $pID);
 
@@ -24,6 +28,13 @@ class Comments extends Model{
       return $message;
 
 
+  }
+
+  function deleteComment($commentID){
+  $sql='DELETE from comments WHERE commentID=?';
+  $this->db->execute($sql, array($commentID));
+  $message = 'Comment Removed';
+  return $message;
   }
 
 }

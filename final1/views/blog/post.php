@@ -18,7 +18,7 @@ if( is_array($post) ) {
 <h4>Comments</h4>
       <?php
       foreach($comments as $row) {
-      echo $row['commentText']."<br><sub>Posted on ". $row['date']." by ".$row['first_name'].' '.$row['last_name'].'<sub>';
+      echo $row['commentText']."<br><sub>Posted on ". $row['date']." by ".$row['first_name'].' '.$row['last_name'].'</sub><hr>';
     }
        ?>
 
@@ -27,16 +27,24 @@ if( is_array($post) ) {
 <?php
   if (isset($_SESSION['uID'])) {
     echo '<form action="'.BASE_URL.'blog/addcomment/" method="post">
-      <textarea name="comments">Leave a comment here...</textarea>
-      <br>
-      <label for="date">Date</label>'.
-date_default_timezone_set('America/Indiana/Indianapolis').'
-      <input name="date" id="date" size="16" type="date" value="'.$date = date('Y-m-d H:i:s').'">
       <input name="uID" value="'.$_SESSION["uID"].'" style="display: none">
+      <textarea name="commentText">Leave a comment here...</textarea>
+      <br>
+      <label for="date">Date</label>'.date_default_timezone_set('America/Indiana/Indianapolis').'
+      <input name="date" id="date" size="16" type="date" value="'.$date = date('Y-m-d H:i:s').'">
       <input name="postID" value="'.$pID.'" style="display: none">
-      <input type="submit" class= "btn">
-    </form>';
+      <input type="submit" class= "btn">';
+
+    if (isAdmin()) {
+      '<button class="btn"><a href="'.BASE_URL.'/blog/deletecomment/'.$commentID.'">Delete</a></button>
+
+      </form>';
+    }
   }
+
+
+
+
 
 ?>
 <?php if($message){?>

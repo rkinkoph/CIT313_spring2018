@@ -5,6 +5,14 @@ class BlogController extends Controller{
 	public $postObject;
 	public $commentsObject;
 
+
+	public function index(){
+		$this->postObject = new Post();
+		$posts = $this->postObject->getAllPosts();
+		$this->set('title', 'The Default Blog View');
+		$this->set('posts',$posts);
+	}
+
    	public function post($pID){
      $this->postObject = new Post();
 		 $post = $this->postObject->getPost($pID);
@@ -25,12 +33,12 @@ class BlogController extends Controller{
 		header("Location: " . BASE_URL . "blog/post/" . $_POST['postID']);
 	}
 
-	public function index(){
-		$this->postObject = new Post();
-		$posts = $this->postObject->getAllPosts();
-		$this->set('title', 'The Default Blog View');
-		$this->set('posts',$posts);
+	public function deleteComment() {
+		$this->commentObject - new Comments();
+		$comments =$this->commentsObject->deleteComment($commentID);
+		$this->set('deleteComment', $deleteComment);
 	}
+
 
 }
 
