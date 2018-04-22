@@ -34,10 +34,11 @@ class BlogController extends Controller{
 	}
 
 	public function deleteComment() {
-		$this->commentObject - new Comments();
-		$comments =$this->commentsObject->deleteComment($commentID);
+		$this->commentsObject - new Comments();
+		$deleteComment = $this->commentsObject->deleteComment($commentID);
 		$this->set('deleteComment', $deleteComment);
-	
+		header("Location: " . BASE_URL . "blog/post/" . $_POST['postID']);
+
 	}
 
 
