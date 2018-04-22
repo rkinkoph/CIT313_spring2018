@@ -3,7 +3,7 @@ class Comments extends Model{
 
   public function getComments($pID){
 
-      $sql = 'SELECT c.commentText, c.date, u.first_name, u.last_name
+      $sql = 'SELECT c.commentID, c.commentText, c.date, u.first_name, u.last_name
       FROM comments c
       INNER JOIN users u ON c.uID = u.uID
       INNER JOIN posts p on p.pID = c.postID

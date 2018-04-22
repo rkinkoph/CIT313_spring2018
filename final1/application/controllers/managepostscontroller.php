@@ -60,4 +60,13 @@ class ManagePostsController extends Controller{
 		$this->set('task', 'update');
 	}
 
+	public function delete($pID) {
+
+		$this->postObject = new Post();
+		$delete = $this->postObject->deletePost($pID);
+		$this->set('delete', $delete);
+		header("Location: " . BASE_URL . "manageposts/");
+
+	}
+
 }
