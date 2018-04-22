@@ -12,10 +12,6 @@ class Comments extends Model{
 
       $results = $this->db->execute($sql, $pID);
 
-   while ($row=$results->fetchrow()) {
-          $comments[] = $row;
-      }
-
       return $results;
 
   }

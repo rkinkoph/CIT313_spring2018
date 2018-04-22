@@ -21,7 +21,7 @@ if( is_array($post) ) {
       echo $row['commentText']."<br><sub>Posted on ". $row['date']." by ".$row['first_name'].' '.$row['last_name'].'</sub><hr>';
 
         if($u->isAdmin()) {
-          echo '<br><button class="btn"><a href="'.BASE_URL.'/blog/deleteComment/'.$commentID.'">Delete</a></button></form>';
+          echo '<button class="btn" style="float: right;"><a href="'.BASE_URL.'/blog/deleteComment/'.$commentID.'">Delete</a></button></form>';
         }
     }
        ?>
