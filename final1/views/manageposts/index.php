@@ -15,7 +15,7 @@
   <div class="row">
       <div class="span8">
 
-<a href="<?php echo BASE_URL;?>manageposts/add" class="btn btn-primary">Add a Post</a> <a href="<?php echo BASE_URL;?>managecategories" class="btn btn-primary">Manage Categories</a>
+<a href="<?php echo BASE_URL;?>manageposts/add" class="btn btn-primary">Add a Post</a> <a href="<?php echo BASE_URL;?>categories" class="btn btn-primary">Manage Categories</a>
 <hr>
 
 
