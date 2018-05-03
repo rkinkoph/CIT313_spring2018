@@ -18,14 +18,14 @@ if( is_array($post) ) {
 <h3>View Comments:</h3>
       <?php
       foreach($comments as $row) {
-      echo $row['commentText']."<br><sub>Posted on ". $row['date']." by ".$row['first_name'].' '.$row['last_name'].'</sub>';
+      echo $row['commentText']."<br><sub>Posted on ". $row['date']." by ".$row['first_name'].' '.$row['last_name'].'</sub><br><hr>';
 
         if($u->isAdmin()) {
           echo '<form action="'.BASE_URL.'blog/deleteComment/" method="post">
           <input name="commentID" value="'.$row['commentID'].'" style="display: none">
-          <input name="postID" value="'.$pID.'" style="display: none"><br>
+          <input name="postID" value="'.$pID.'" style="display: none">
           <input type="submit" value="Delete Comment">
-          </form><hr>';
+          </form><br>';
         }
     }
        ?>
@@ -44,7 +44,11 @@ if( is_array($post) ) {
       <input type="submit" class= "btn"></form>';
 
 
+
   }
+    else {
+      echo '<a href="'.BASE_URL.'login/" class="btn btn-primary">Login to post a comment</a>';
+    }
 
 
 

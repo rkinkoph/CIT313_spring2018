@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="<?php echo BASE_URL?>views/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="<?php echo BASE_URL?>views/css/journaltheme.min.css" rel="stylesheet">
     <link href="<?php echo BASE_URL?>views/css/styles.css" rel="stylesheet">
     <style>
@@ -54,7 +54,7 @@
           </a>
           <a class="brand" href="<?php echo BASE_URL?>">MVC Pro</a>
           <div class="nav-collapse collapse">
-            <ul class="nav">
+            <ul class="nav nav-header">
               <li class="active"><a href="<?php echo BASE_URL?>">Home</a></li>
               <li><a href="<?php echo BASE_URL?>blog/">Blog</a></li>
               <li><a href="<?php echo BASE_URL?>members/">Members</a></li>
